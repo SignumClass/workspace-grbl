@@ -1480,7 +1480,7 @@ cpdefine("inline:com-chilipeppr-workspace-grblcamv1", ["chilipeppr_ready"], func
 
 
             chilipeppr.load(
-              "#com-chilipeppr-Widget-CamV1-Instance1",
+              "#com-chilipeppr-CamV1-Instance1",
               "http://raw.githubusercontent.com/xpix/widget-cam/master/auto-generated-widget.html",
               function() {
                 // Callback after widget loaded into #myDivWidgetCam
