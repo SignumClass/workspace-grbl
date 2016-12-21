@@ -1478,6 +1478,24 @@ cpdefine("inline:com-chilipeppr-workspace-grblcamv1", ["chilipeppr_ready"], func
                 });
                 */
 
+
+            chilipeppr.load(
+              "#com-chilipeppr-Widget-CamV1-Instance1",
+              "http://raw.githubusercontent.com/xpix/widget-cam/master/auto-generated-widget.html",
+              function() {
+                // Callback after widget loaded into #myDivWidgetCam
+                // Now use require.js to get reference to instantiated widget
+                cprequire(
+              ["inline:com-chilipeppr-widget-cam"], // the id you gave your widget
+                  function(myObjWidgetCam) {
+                    // Callback that is passed reference to the newly loaded widget
+                    console.log("Widget / Cam just got loaded.", myObjWidgetCam);
+                    myObjWidgetCam.init();
+                  }
+                );
+              }
+            );
+
             // Serial Port Selector
             // http://jsfiddle.net/chilipeppr/vetj5fvx/
             chilipeppr.load("com-chilipeppr-serialport-spselector",
