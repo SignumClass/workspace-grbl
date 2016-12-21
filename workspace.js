@@ -1487,10 +1487,28 @@ cpdefine("inline:com-chilipeppr-workspace-grblcamv1", ["chilipeppr_ready"], func
                 // Now use require.js to get reference to instantiated widget
                 cprequire(
                   ["inline:com-chilipeppr-widget-cam"], // the id you gave your widget
-                  function(myObjWidgetCam) {
+                  function(myObjWidgetCam1) {
                     // Callback that is passed reference to the newly loaded widget
-                    console.log("Widget / Cam just got loaded.", myObjWidgetCam);
-                    myObjWidgetCam.init();
+                    console.log("Widget / Cam just got loaded.", myObjWidgetCam1);
+                    myObjWidgetCam1.init();
+                  }
+                );
+              }
+            );
+
+
+            chilipeppr.load(
+              "com-chilipeppr-CamV1-Instance2",
+              "http://raw.githubusercontent.com/xpix/widget-cam/master/auto-generated-widget.html",
+              function() {
+                // Callback after widget loaded into #myDivWidgetCam
+                // Now use require.js to get reference to instantiated widget
+                cprequire(
+                  ["inline:com-chilipeppr-widget-cam"], // the id you gave your widget
+                  function(myObjWidgetCam2) {
+                    // Callback that is passed reference to the newly loaded widget
+                    console.log("Widget / Cam just got loaded.", myObjWidgetCam2);
+                    myObjWidgetCam2.init();
                   }
                 );
               }
